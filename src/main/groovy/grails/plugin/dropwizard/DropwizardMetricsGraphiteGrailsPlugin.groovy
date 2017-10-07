@@ -56,12 +56,14 @@ Grails 3 plugin adding GraphiteReporter support to Grails Dropwizard-Metrics plu
 
     @Override
     Closure doWithSpring() { { ->
-        graphiteMetricFilter(graphiteReporterFactory: 'graphiteMetricFilter')
+        if(config.getProperty('grails.dropwizard.metrics.reporterFrequency', Integer, 0)) {
+            graphiteMetricFilter(graphiteReporterFactory: 'graphiteMetricFilter')
 
-        graphiteReporterFactory(GraphiteReporterFactory)
+            graphiteReporterFactory(GraphiteReporterFactory)
 
-        if(config.getProperty('grails.dropwizard.metrics.graphite-reporter.active', Boolean, true)) {
-            dropwizardGraphiteReporter(graphiteReporterFactory: 'graphiteReporter')
+            if (config.getProperty('grails.dropwizard.metrics.graphite-reporter.active', Boolean, true)) {
+                dropwizardGraphiteReporter(graphiteReporterFactory: 'graphiteReporter')
+            }
         }
     } }
 }
