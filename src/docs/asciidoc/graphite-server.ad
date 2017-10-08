@@ -1,0 +1,38 @@
+The Graphite app website offers instructions on installing the Graphite service.
+
+For development, perhaps the best and easiest way is to not install it at all and simply run it within a
+Docker container. You can download and launch a Docker container with a pre-installed Graphite server
+using this command:
+
+```
+docker run -d\
+ --name graphite\
+ --restart=always\
+ -p 80:80\
+ -p 2003-2004:2003-2004\
+ -p 2023-2024:2023-2024\
+ -p 8125:8125/udp\
+ -p 8126:8126\
+ graphiteapp/graphite-statsd
+```
+
+After starting the container, your application can feed metrics to graphite and you can view them using
+the Graphite server web application served from the container on port 80.
+
+The left pane is a tree control showing various metrics, as shown below:
+
+image::MetricPrefix.png[Metric Prefix used in Graphite display, 300, 900, align="center"]
+
+The main content area is a graph of the metrics being collected by Graphite:
+
+image::MetricsReporting.png[Metric reporting graph, 900, 900, align="center"]
+
+=== For more information
+
+Dropwizard GraphiteReporter page: http://metrics.dropwizard.io/3.1.0/manual/graphite/
+
+Graphite home: http://graphiteapp.org/
+
+Installing Graphite: https://graphite.readthedocs.io/en/latest/install.html
+
+Graphite-Statsd Docker Image: https://github.com/graphite-project/docker-graphite-statsd

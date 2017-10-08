@@ -45,7 +45,8 @@ asciidoctor {
             'compat-mode'   : 'true',
             'toc'           : 'left',
             'icons'         : 'font',
-            'version'       : project.version
+            'version'       : project.version,
+            'imagesdir'     : 'images'
 }
 
 // enable if you wish to package this plugin as a standalone application

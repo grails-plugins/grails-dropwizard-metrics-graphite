@@ -1,6 +1,7 @@
-= Grails Dropwizard Metrics {version}
-:author: Jeff Scott Brown
-:email: brownj@ociweb.com
+= Grails Dropwizard Metrics - Graphite {version}
+:author: Jack Frosch
+:email: froschj@objectcomputing.com
+:imagesdir: images
 :source-highlighter: coderay
 :numbered:
 
@@ -12,17 +13,13 @@ include::introduction.ad[]
 
 include::installation.ad[]
 
-== Metrics
+== Metrics Reporting
 
-include::metrics.ad[]
+include::reporting.ad[]
 
-== Health Checks
+== Graphite Server
 
-include::healthchecks.ad[]
-
-== Logging
-
-include::logging.ad[]
+include::graphite-server.ad[]
 
 == API Documentation
 

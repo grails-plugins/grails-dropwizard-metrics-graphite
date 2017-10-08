@@ -29,12 +29,16 @@ class GraphiteReporterFactory {
     @Value('${grails.dropwizard.metrics.graphite-reporter.graphite-server-port:2003}')
     Integer graphiteServerPort
 
-    @Value('${grails.dropwizard.metrics.graphite-reporter.graphite-metric-prefix:example.com}')
+    @Value('${grails.dropwizard.metrics.graphite-reporter.graphite-metric-prefix:graphite.localhost}')
     String graphiteMetricPrefix
 
-    @Value('${grails.dropwizard.metrics.graphite-reporter.metric-filter:graphiteMetricFilter}')
+    @Value('${grails.dropwizard.metrics.graphite-reporter.graphite-metric-filter:graphiteMetricFilter}')
     String metricFilter
 
+    /**
+     * Instantiates a GraphiteReporter as configured in application.yml, to be registered as a Spring bean named 'dropwizardGraphiteReporter'
+     * @return A GraphiteReporter instance
+     */
     GraphiteReporter graphiteReporter() {
         MetricFilter filter = applicationContext.getBean(metricFilter) as MetricFilter
         final Graphite graphite = new Graphite(new InetSocketAddress(graphiteServer, graphiteServerPort))
@@ -50,6 +54,10 @@ class GraphiteReporterFactory {
         graphiteReporter
     }
 
+    /**
+     * Defines a Spring bean named graphiteMetricFilter that is the default metric filter
+     * @return A MetricFilter allowing all metrics; i.e. MetricFilter.ALL
+     */
     MetricFilter graphiteMetricFilter() {
         MetricFilter.ALL
     }
