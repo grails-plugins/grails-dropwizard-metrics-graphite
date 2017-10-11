@@ -1,3 +1,3 @@
-# Grails Dropwizard Metrics
+# Grails Dropwizard Metrics - Graphite
 
-Documentation is available [here](http://grails-plugins.github.io/grails-dropwizard-metrics/).
+Documentation is available [here](http://grails-plugins.github.io/grails-dropwizard-metrics-graphite/).
