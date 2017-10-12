@@ -4,4 +4,4 @@ Documentation is available [here](http://grails-plugins.github.io/grails-dropwiz
 
 # Grails Dropwizard Metrics - Graphite
 
-Documentation will be available soon.
+Documentation is available [here](http://grails-plugins.github.io/grails-dropwizard-metrics-graphite/).
