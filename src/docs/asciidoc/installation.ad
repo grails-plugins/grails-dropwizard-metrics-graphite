@@ -8,4 +8,4 @@ This plugin depends on version 1.0.0.M3+ of the core Dropwizard Metrics plugin, 
 to declare the following dependency:
 
 [source,groovy,subs="attributes"]
-compile "org.grails.plugins:dropwizard-metrics-:1.0.0.M3+"
+compile "org.grails.plugins:dropwizard-metrics-:{version}"
