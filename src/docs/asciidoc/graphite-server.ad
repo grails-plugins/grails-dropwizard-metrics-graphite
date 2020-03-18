@@ -29,8 +29,6 @@ image::MetricsReporting.png[Metric reporting graph, 900, 900, align="center"]
 
 === For more information
 
-Dropwizard GraphiteReporter page: http://metrics.dropwizard.io/3.1.0/manual/graphite/
-
 Graphite home: http://graphiteapp.org/
 
 Installing Graphite: https://graphite.readthedocs.io/en/latest/install.html

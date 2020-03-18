@@ -1,6 +1,11 @@
 The Dropwizard Metrics Graphite plugin provides capabilities for metrics reporting through Graphite
-for Grails 3 applications.
+for Grails 4 applications.
 
-It depends on the core Dropwizard Metrics plugin, http://grails-plugins.github.io/grails-dropwizard-metrics[`grails-dropwizard-metrics`]
+Dropwizard dependencies used in this plugin:
+```
+io.dropwizard.metrics:metrics-core:4.1.5
+io.dropwizard.metrics:metrics-graphite:4.1.5
+```
 
-Also, the Dropwizard GraphiteReporter requires JDK 8.
+Note: You may find you need to declare the Dropwizard dependencies as primary dependencies in
+your build file because of the way Gradle 5 is handling Grails plugin dependencies.
