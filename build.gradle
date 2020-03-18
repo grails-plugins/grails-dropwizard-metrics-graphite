@@ -37,7 +37,7 @@ dependencies {
     compile 'io.dropwizard.metrics:metrics-graphite:3.1.2'
     profile "org.grails.profiles:web-plugin"
     testCompile "org.grails:grails-plugin-testing"
-    testCompile "org.grails.plugins:dropwizard-metrics:1.0.0.M3"
+    testCompile "org.grails.plugins:dropwizard-metrics:1.0.0"
 }
 
 asciidoctor {
